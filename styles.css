@@ -1,0 +1,662 @@
+/* 🔹 General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #28A745; /* Full blue background */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Make Top Menu Bar Fit the Screen */
+/* 🔹 Make Top Menu Bar Fit the Screen */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    position: fixed;
+    width: 100vw; /* Ensures it fits the full screen width */
+    top: 0;
+    z-index: 1000;
+    margin-left: 10px; /* Add this line to shift the menu slightly to the left */
+}
+
+/* 🔹 Hero Section */
+.hero {
+    width: 100vw;  /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the section */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Logo and Kiwi Kids Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: popUp 2s ease-in-out; /* Animation for pop-up */
+}
+
+.logo {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.kiwi-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #0047BA; /* Green color for Kiwi Kids */
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* 🔹 Hero Section */
+.hero {
+    margin-top: 60px; /* Push down to avoid overlap with fixed header */
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🔹 Welcome Section */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.welcome-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🔹 Images Positioned Properly */
+.kiwi-image {
+    flex: 1;
+    max-width: 250px;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.left-image {
+    align-self: center;
+    transform: translateX(-50px);
+}
+
+.right-image {
+    align-self: center;
+    transform: translateX(50px);
+}
+
+/* 🔹 Center Text */
+.welcome-content {
+    flex: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 🔹 Buttons */
+.buttons {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.primary-btn {
+    background-color: #0047BA;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #FFC107;
+    color: black;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* 🔹 Feature Boxes */
+.feature-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+    max-width: 1200px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.feature-boxes.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🔹 Individual Box Styling */
+.box {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🔹 Hover Effect */
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Box Colors */
+.box-yellow {
+    background-color: #FFF8B5;
+    color: #333;
+}
+
+.box-red {
+    background-color: #FF4C4C;
+    color: white;
+}
+
+/* 🔹 Icons in Boxes */
+.box-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 🔹 Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .kiwi-image {
+        align-self: center;
+        max-width: 200px;
+    }
+
+    .feature-boxes {
+        flex-direction: column;
+    }
+}
+
+/* Banner Section */
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #28A745; /* Blue Background */
+    overflow: hidden;
+}
+
+/* Avatar Images */
+.banner-images {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.avatar {
+    width: 180px; /* Adjust size */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Banner Text */
+.banner-text {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #28A745; /* Light Blue */
+    margin-top: 20px;
+    animation: slideUp 1s ease-in-out;
+}
+
+.banner-text span {
+    color: #0047BA; /* Green Color */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Banner Section */
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #28A745;
+    overflow: hidden;
+}
+
+.banner-images {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.avatar {
+    width: 180px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.banner-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.8; /* Reduce space between lines */
+    text-align: center;
+}
+
+.banner-text {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #28A745;
+    margin: 5px 0; /* Reduce space between lines */
+    animation: slideUp 1s ease-in-out;
+}
+
+.banner-text span {
+    color: #0047BA;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.welcome-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Welcome Content */
+.welcome-content {
+    flex: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.kiwi-title {
+    font-size: 4rem; /* Bigger font */
+    font-weight: bold;
+    color: #0047BA; /* Green color */
+    text-transform: uppercase;
+}
+
+.kiwi-description {
+    font-size: 1.2rem;
+    text-align: justify;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Welcome Text Adjustments */
+.welcome-text {
+    font-size: 3rem; /* Bigger than before, but smaller than Kiwi Kids */
+    font-weight: bold;
+    color: white;
+    margin-bottom: -10px; /* Reduce space between Welcome and Kiwi Kids */
+}
+
+.kiwi-title {
+    font-size: 4rem; /* Larger, but creates hierarchy */
+    font-weight: bold;
+    color: #0047BA;
+    text-transform: uppercase;
+}
+
+/* Popup Animation for Banner Section */
+.banner-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.banner-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* General Styling */
+.hero-section {
+    background-color: #28A745;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Title Styling */
+.title {
+    font-size: 60px;
+    color: #0047BA;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #28A745;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #0047BA;
+    color: #333;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #0047BA;
+}
+
+/* Year Round Programs Text */
+.year-round-text {
+    font-size: 40px;
+    color: #0047BA;
+    margin-top: 50px;
+}
+
+/* Floating Circular Images */
+.images-container {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.circle-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.img1 { top: -40px; left: 20%; }
+.img2 { top: 20px; left: 40%; }
+.img3 { top: -50px; left: 60%; }
+.img4 { top: 30px; left: 80%; }
+.img5 { top: -20px; right: 10%; }
+
+/* Bubbles Animation */
+.bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatBubble 8s infinite linear;
+}
+
+.bubble:nth-child(1) { width: 50px; height: 50px; left: 10%; animation-duration: 2s; }
+.bubble:nth-child(2) { width: 70px; height: 70px; left: 30%; animation-duration: 3s; }
+.bubble:nth-child(3) { width: 60px; height: 60px; left: 50%; animation-duration: 3s; }
+.bubble:nth-child(4) { width: 40px; height: 40px; left: 70%; animation-duration: 2s; }
+
+@keyframes floatBubble {
+    0% { transform: translateY(100px); opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-600px); opacity: 0; }
+}
+
+/* Section Styling */
+.content-section {
+    background-color: #28A745;
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container with Navy Blue Background */
+.content-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: rgb(11, 67, 22); /* Navy blue background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Left Content - Image */
+.left-content {
+    flex: 1;
+    text-align: center;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Right Content - Text */
+.right-content {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.info-text {
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+
+.info-text {
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image-item {
+    width: 12%; /* Decrease the width to make images smaller */
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+@media screen and (max-width: 768px) {
+    .image-gallery {
+        justify-content: center;
+    }
+
+    .image-item {
+        width: 15%; /* Adjust width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-gallery {
+        justify-content: center;
+    }
+
+    .image-item {
+        width: 30%; /* Adjust further for very small screens */
+    }
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Centers images */
+    align-items: center; /* Aligns images vertically */
+    gap: 5px; /* Reduces spacing between images */
+}
+
+.image-item {
+    width: 18%; /* Adjust width to fit images closer */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
